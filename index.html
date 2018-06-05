@@ -1,18 +1,8 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <?php
-    2.
-    $xml=file_get_contents('http://twitter.com/users/show.xml?screen_name=catswhocode');
-    3.
-    if (preg_match('/followers_count>(.*) </',$xml,$match)!=0) {
-    4.
-    $tw['count'] = $match[1];
-    5.
-    }
-    6.
-    echo $tw['count'];
-    7.
-    ?>
+<?php $tw_username = 'Min_Bot'; $data = file_get_contents('http://cdn.syndication.twimg.com/widgets/followbutton/info.json?screen_names='.$tw_username); 
+$parsed = json_decode($data,true); $tw_followers = $parsed[0]['followers_count']; echo $tw_followers;
+?>
 </body>
 </html>
