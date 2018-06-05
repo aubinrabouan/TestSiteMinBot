@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		
+		<p>
 		$data = json_decode(file_get_contents('http://api.twitter.com/1.1/users/lookup.json?screen_name=google'), true);
 echo $data[0]['followers_count'];
+        </p>
 	</body>
 </html>
